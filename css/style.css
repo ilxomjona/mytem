@@ -1,0 +1,360 @@
+:root {
+	--white-color: #fff;
+	--light-color: #f67e7e;
+	--green-color: #014e56;
+	--blue-color: #79c8c7;
+	--police-blue: #2c6269;
+	--deep-grean: #004047;
+	--state-green: #012f34;
+	--dark-green: #002529;
+}
+
+@font-face {
+	font-family: 'Livvic';
+	src: url('../fonts/Livvic-Bold.woff2') format('woff2'), url('../fonts/Livvic-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Livvic';
+	src: url('../fonts/Livvic-SemiBold.woff2') format('woff2'), url('../fonts/Livvic-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Livvic';
+	src: url('../fonts/Livvic-Regular.woff2') format('woff2'), url('../fonts/Livvic-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+html {
+	height: 100vh;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+}
+
+*::after,
+*::before,
+* {
+	box-sizing: inherit;
+}
+
+*:focus {
+	outline: 2px dashed var(--btn-color);
+	outline-offset: 3px;
+}
+
+body {
+	font-family: 'Livvic', sans-serif;
+	font-weight: 400;
+	line-height: 2.8rem;
+	font-size: 1.8rem;
+	color: var(--white-color);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.container {
+	max-width: 1150px;
+	width: 100%;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-color);
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.site-wrapper {
+}
+.site-header__wrapper {
+	background-color: var(--green-color);
+}
+.site-header {
+	padding-top: 7.3rem;
+	padding-bottom: 12.9rem;
+}
+.site-header__container {
+	display: flex;
+	align-items: center;
+}
+
+.site-logo {
+	font-weight: 600;
+	margin-right: 8rem;
+	font-size: 3rem;
+	color: var(--white-color);
+}
+.site-header__list {
+	display: flex;
+	align-items: center;
+	margin-right: auto;
+}
+.site-header__item:not(:last-child) {
+	margin-right: 4rem;
+}
+.site-header__link {
+	font-weight: 600;
+	font-size: 1.8rem;
+	line-height: 1.5;
+	color: var(--white-color);
+}
+
+.site-header__link:hover {
+	cursor: pointer;
+	color: var(--light-color);
+}
+.btn {
+	color: var(--white-color);
+	font-weight: 600;
+	font-size: 1.8rem;
+	line-height: 1.5;
+	letter-spacing: 0.025rem;
+	cursor: pointer;
+	padding: 9px 33px 11px;
+	border: 2px solid var(--white-color);
+	border-radius: 2rem;
+	background-color: transparent;
+}
+
+.btn:hover {
+	border: 2px solid var(--dark-green);
+	background-color: var(--white-color);
+	color: var(--dark-green);
+}
+
+.mytem-icon {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	display: none;
+}
+
+.site-nav__header-btn {
+	display: none;
+}
+
+.site-nav__login {
+	display: none;
+}
+
+.site-nav__header-link {
+	display: none;
+}
+
+/* media */
+
+@media screen and (max-width: 992px) {
+	.site-header {
+		padding-top: 7rem;
+		padding-bottom: 12rem;
+	}
+
+	.site-logo {
+		margin-right: 7rem;
+	}
+	.site-header__list {
+		margin-right: auto;
+	}
+	.site-header__item:not(:last-child) {
+		margin-right: 4rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.site-header {
+		padding-top: 6.4rem;
+		padding-bottom: 11.2rem;
+	}
+
+	.site-logo {
+		margin-right: 4.8rem;
+	}
+	.site-header__list {
+		margin-right: auto;
+	}
+	.site-header__item:not(:last-child) {
+		margin-right: 4rem;
+	}
+}
+
+@media screen and (max-width: 570px) {
+	.site-header {
+		padding-top: 6rem;
+		padding-bottom: 11rem;
+	}
+
+	.site-logo {
+		margin-right: 4rem;
+		font-size: 2.8rem;
+	}
+
+	.site-header__item:not(:last-child) {
+		margin-right: 2rem;
+	}
+	.site-header__link {
+		font-size: 1.6rem;
+	}
+	.btn {
+		font-size: 1.4rem;
+		padding: 8px 30px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	body {
+		font-size: 1.3rem;
+	}
+
+	.site-header {
+		padding-top: 5.6rem;
+		padding-bottom: 10rem;
+	}
+
+	.site-header__container {
+		display: flex;
+	}
+
+	.site-logo {
+		margin-right: auto;
+		font-size: 2.8rem;
+	}
+	.site-header__list {
+		display: none;
+	}
+
+	.btn {
+		display: none;
+	}
+
+	.mytem-icon img {
+		background-color: transparent;
+	}
+	.site-header__list {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: rgba(36, 42, 69, 0.8);
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		color: var(--white-color);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		transform: translateX(100%);
+		transition: transform 0.4s ease-in-out;
+		z-index: 11111;
+	}
+
+	.site-nav__header {
+		position: absolute;
+		top: 2rem;
+		left: 3.2rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 309px;
+		width: 100%;
+	}
+	.site-nav__header-link {
+		margin-right: auto;
+	}
+	.site-nav__header-btn {
+		background-color: transparent;
+		border: none;
+	}
+
+	.site-header__item:not(:last-child) {
+		margin-right: 0;
+	}
+
+	.site-header__item {
+		padding-top: 2.4rem;
+		padding-bottom: 2.5rem;
+		text-align: center;
+		max-width: 309px;
+		width: 100%;
+		border-bottom: 1px solid var(--white-color);
+	}
+
+	.site-header__item:nth-child(1n) {
+		font-size: 2rem;
+		letter-spacing: 0.23rem;
+		text-align: center;
+		max-width: 309px;
+		width: 100%;
+		border-top: 1px solid var(--white-color);
+	}
+	.site-header__link {
+		color: var(--white-color);
+		font-size: 2rem;
+		letter-spacing: 0.23rem;
+	}
+
+	.site-nav__login {
+		display: block;
+		width: 309px;
+		padding-top: 2.4rem;
+	}
+
+	.site-nav__login button {
+		border-radius: 0.8rem;
+		font-size: 2rem;
+		letter-spacing: 0.23rem;
+		width: 100%;
+		border: 2px solid var(--white-color);
+		color: var(--white-color);
+		display: block;
+		padding-top: 1.6rem;
+		padding-bottom: 1.6rem;
+		background-color: transparent;
+	}
+
+	.site-header__list.active {
+		transform: translateX(0);
+	}
+
+	.mytem-icon {
+		display: block;
+	}
+
+	.site-nav__header-btn {
+		display: block;
+	}
+
+	.site-nav__header-link {
+		display: block;
+	}
+}
